@@ -1,6 +1,7 @@
 # pandas
 
 1. How do you check which version of `pandas` you have installed?
+
   a) The python packages have a `__version__` attribute which we can use to see their version. If we are in python interpretor, I can do the following:
 
   ```python
