@@ -45,17 +45,18 @@
 
     1. Make sure, that `categorical` columns are not stored as `string` or `object` type. 
 
-      ```python
-      import pandas as pd 
+        ```python
+        import pandas as pd 
 
-      # to convert to category type
-      some_column.astype('category')
+        # to convert to category type
+        some_column.astype('category')
 
-      # to order categories 
-      some_column.astype('category').reorder_categories(values=[*sorted_categories], ordered=True)
+        # to order categories 
+        some_column.astype('category').reorder_categories(values=[*sorted_categories], ordered=True)
 
-      # we can also create ordered categories using pd.CategoricalDtype
-      ordered_categories = pd.CategoricalDtype(values=[*sorted_categories], ordered=True)
-      some_column.astype(ordered_categories)
-      ```
+        # we can also create ordered categories using pd.CategoricalDtype
+        ordered_categories = pd.CategoricalDtype(values=[*sorted_categories], ordered=True)
+        some_column.astype(ordered_categories)
+        ```
+
     2. By default, `pandas` will store the numeric column in `Int64` and float column in `float64` type. If we have numeric columns which don't have large numbers, we can store them in smaller type like `int8` or `int16`. But we should be cautious about the range of the column, for example, `int8` can store numbers only from `0` to `255`, for any number larger than `255` it will throw an error.
