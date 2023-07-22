@@ -60,3 +60,7 @@
         ```
 
     2. By default, `pandas` will store the numeric column in `Int64` and float column in `float64` type. If we have numeric columns which don't have large numbers, we can store them in smaller type like `int8` or `int16`. But we should be cautious about the range of the column, for example, `int8` can store numbers only from `0` to `255`, for any number larger than `255` it will throw an error.
+
+5. **Explain the axes of a dataframe?**
+
+    Unlike series, which only have one axis (or index), a dataframe has two axes, one for rows and one for columns. The `index` or `"rows"` is generally represented as `axis=0`, whereas `"columns"` is generally represented as `axis=1`. Most of the methods of pandas have a parameter `axis` for specifying which axis to operate on. When `axis` is equal to `0`, this means the operation is carried out across rows and if `axis` is equal to `1`, then the operation is carried out across columns. For example let's say you are concatinating tow dataframes, if you pass `axis=0` to `pd.concat`, then the dataframes will be concatenated across rows, like keeping books on top of each other. And if you pass `axis=1` to `pd.concat`, then the dataframes will be concatenated across columns, like keeping books in a book shelve. Note that these operation are carried out by aligning indexes, if there are no matches for an index, it will be added to be added to the resulting dataframe, but the non-matching rows (or columns) will be filled with `<NA>` or `NaN`.
