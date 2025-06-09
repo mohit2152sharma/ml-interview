@@ -1,0 +1,2 @@
+
+- [ ] bias variance definition 🏁 delete 

@@ -1,4 +1,4 @@
-# ml-interview
+# ml
 
-This repo is a collection of questions being asked in machine learning interview.
-
+- machine learning notes
+- To view the notes effectively, use [obsidian](https://obsidian.md)
