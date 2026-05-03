@@ -1,1 +1,0 @@
-- [ ] gradient boosting definition and techniques 🏁 delete
